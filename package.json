@@ -1,0 +1,23 @@
+{
+  "name": "to-do-list-extra",
+  "version": "1.0.0",
+  "description": "new to-do-list",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alzubair98/to-do-list-extra.git"
+  },
+  "author": "alzubair",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alzubair98/to-do-list-extra/issues"
+  },
+  "homepage": "https://github.com/Alzubair98/to-do-list-extra#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1"
+  }
+}
