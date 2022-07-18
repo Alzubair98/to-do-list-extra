@@ -3,18 +3,28 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+let tasks = [];
+
+app.use(bodyParser.urlencoded({extended:true}));
+app.set('view engine', 'ejs'); //this is required from ejs to work
+
 app.get('/', (req, res)=>{
 
-    var today = new Date();
-    var currentDay = today.getDay();
-    if(currentDay === 6 || currentDay === 0){
-        res.send("<h1>Heyy its Wekend</h1>");
-    } else{
-        res.send("<h1>Hi, Nw day New tasks</h1>");
-    }
+    let currentDay = new Date().toLocaleDateString('en-us', {weekday:"long", day: 'numeric', month:'long'}); // long day to display day name
     
+    res.render('list', {kindOfDay: currentDay, newListItems: tasks});
 });
+
+//to get items from the html
+
+app.post('/', (req, res)=>{
+    let task = req.body.newItem;
+    tasks.push(task);
+    res.redirect('/');
+});
+
+
 
 app.listen(3000, ()=>{
     console.log('server started on port 3000');
-})
+}) 
