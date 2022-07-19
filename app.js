@@ -5,7 +5,9 @@ const app = express();
 
 let tasks = [];
 
-app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.urlencoded({extended:true})); // to use the body parser
+app.use(express.static('public'))
+
 app.set('view engine', 'ejs'); //this is required from ejs to work
 
 app.get('/', (req, res)=>{
