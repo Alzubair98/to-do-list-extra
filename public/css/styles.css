@@ -1,7 +1,7 @@
 html {
   background-color: #E4E9FD;
-  background-image: -webkit-linear-gradient(65deg, #A683E3 50%, #E4E9FD 50%);
-  min-height: 1000px;
+  background-image: -webkit-linear-gradient(120deg, #A683E3 50%, #E4E9FD 50%);
+  min-height: 750px;
   font-family: 'helvetica neue';
 }
 
@@ -66,6 +66,7 @@ button {
   font-size: 30px;
   padding-bottom: 6px;
   border-width: 0;
+  cursor: pointer;
 }
 
 input[type="text"] {

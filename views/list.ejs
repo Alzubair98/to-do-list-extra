@@ -8,18 +8,23 @@
     <title>To Do List</title>
 </head>
 <body>
-    <h1><%= kindOfDay%> </h1>
-
-    <ul>
-        <% for(i=0; i< newListItems.length; i++){ %>
-            <li> <%=newListItems[i]%> </li>
-        <%} %>
+    <div class="box" id="heading">
+        <h1><%= kindOfDay%> </h1>
+    </div>
+    
+    <div class="box">
         
-    </ul>
-    <form class="" action="/" method="post">
-        <input type="text" name="newItem">
-        <button type="submit" name="button">Add Task</button>
-    </form>
+            <% for(i=0; i< newListItems.length; i++){ %>
+                <div class="item">
+                    <input type="checkbox">
+                    <p> <%=newListItems[i]%> </p>
+                </div>  
+            <%} %>
+            <form class="item" action="/" method="post">
+                <input type="text" name="newItem" placeholder="New task" autocomplete="off">
+                <button type="submit" name="button">+</button>
+            </form>
+    </div>
     
 </body>
 </html>
